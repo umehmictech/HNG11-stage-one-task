@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage One assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">SimplicityTech</div>
+            <div id="utc-time" class="time">Time</div>
+        </div>
+    </header> <br><br>
+    <main>
+        <div class="text-wrapper">
+            <h4>Welcome</h4>
+            <h1>Goals for the <span>next two years</span> in the Tech field</h1>
+            <div class="image-container">
+                <img src="nature.jpg" alt="Nature">
+            </div>
+        </div>
+        <div class="goals">
+            <h2>Becoming a fullstack web developer.</h2> 
+            <h2>Learning another programming language.</h2>
+            <h2>Build a Brand and a Tech Team.</h2>
+        </div>
+        <div class="contact">
+            <h1>Contact</h1> 
+            <p data-testid="slackusername">Simplicity: <a href="mailto:michaelumeh58@gmail.com" >Email Us</a></p>
+            <h1>Visit</h1>
+            <ul>
+                <li><a href="http://hng.tech/learn">hng.tech/learn</a></li>
+                <li><a href="http://keyword.dog/">keyword.dog</a></li>
+                <li><a href="http://scrapeanyweb.site/">scrapeanyweb.site</a></li>
+            </ul>
+        </div>
+    </main>
+    <script>
+        function updateUTCTime() {
+            const now = new Date();
+            const utcString = now.toISOString().slice(11, 19); // Extracts HH:MM:SS from UTC string
+            document.getElementById('utc-time').textContent = utcString;
+        }
+        updateUTCTime();
+        setInterval(updateUTCTime, 1000);
+    </script>
+</body>
+</html>
